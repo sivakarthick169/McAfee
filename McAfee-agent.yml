@@ -1,5 +1,5 @@
 ---
-- hosts: ansibleclient01.local
+- hosts: localhost
   become_user: root
   tasks:
   - name: ansible create directory example
