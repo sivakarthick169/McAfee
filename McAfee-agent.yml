@@ -2,13 +2,13 @@
 - hosts: localhost
   become_user: root
   tasks:
-  - name: ansible create directory example
+  - name: create directory 
     file:
       path: /etc/sysconfig/mcafee
       state: directory
   - name: changing directory
     shell:
-      chdir: /etc/sysconfig/mcafee
+      cmd: cd /etc/sysconfig/mcafee
   - name: exporting proxy http
     shell:
       cmd: export http_proxy=proxy.austin.hp.com:8080
